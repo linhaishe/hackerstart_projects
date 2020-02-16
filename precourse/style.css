@@ -242,7 +242,7 @@ a:active {
 }
 
 .legal-links a:not(:last-child) {
-  border-right: 1px solid #666;
+  border-right: 1px solid red;
   margin-right: 15px;
   padding-right: 15px;
 }
