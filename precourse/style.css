@@ -1,27 +1,59 @@
+/*                  Font                  */
+@font-face {
+  font-family: "Myriad Set Pro";
+  src: url("./source_code/fonts/myriad-set-pro_bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Myriad Set Pro";
+  src: url("./source_code/fonts/myriad-set-pro_semibold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Myriad Set Pro";
+  src: url("./source_code/fonts/myriad-set-pro_medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Myriad Set Pro";
+  src: url("./source_code/fonts/myriad-set-pro_text.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Myriad Set Pro";
+  src: url("./source_code/fonts/myriad-set-pro_thin.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Myriad Set Pro";
+  src: url("./source_code/fonts/myriad-set-pro_ultralight.ttf")
+    format("truetype");
+  font-weight: 100;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 鼠标hover功能未实现，连接功能未实现 */
+body {
+  font-family: "Myriad Set Pro", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
+}
 
 #nav-bar {
-  /* margin: 0 auto;
-  padding: 0 10px; */
   background-color: rgb(51, 51, 51);
   white-space: nowrap;
 }
 
-ul {
+#nav-bar ul {
   list-style-type: none;
-  /* margin: 0;
-  padding: 0; */
   font-size: 0;
   text-align: center;
 }
 
-li {
+#nav-bar li {
   display: inline-block;
   height: 44px;
   width: 40px;
@@ -29,4 +61,186 @@ li {
 
 nav li:not(:last-child) {
   margin-right: 51.6px;
+}
+
+#nav-bar a:hover img {
+  opacity: 0.5;
+}
+
+#hero {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-top: 11px;
+  padding: 0 10px;
+  /* margin: 0 auto; */
+}
+
+/* #hero-right-contain {
+  display: flex;
+} */
+
+#hero-right-contain {
+  width: 440px;
+  margin-left: 20px;
+}
+
+/* h2 {
+  font-size: 39.5px;
+  font-weight: 300;
+} */
+
+#top-header ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+#top-header li {
+  display: inline-block;
+}
+
+a:link,
+a:visited {
+  color: #08c;
+  text-align: center;
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  color: black;
+  text-decoration: underline;
+}
+
+#hero-sub-watch {
+  background: url(./source_code/images/watch_large.jpg) center center no-repeat;
+}
+
+#hero-sub-ipad {
+  background: url(./source_code/images/ipad_pro_large.jpg) center center
+    no-repeat;
+}
+
+#hero-sub-access {
+  background: url(./source_code/images/accessories_large.jpg) center center
+    no-repeat;
+}
+
+#hero-sub-macbook {
+  background: url(./source_code/images/macbook_large.jpg) center center
+    no-repeat;
+}
+
+#sub-hero {
+  font-size: 0;
+}
+
+.col-3 {
+  display: inline-block;
+  width: 25%;
+  vertical-align: top;
+}
+
+.sub-hero-img {
+  height: 200px;
+  background-size: 640px 200px;
+  border-right: 2px solid #fff;
+}
+
+#sub-hero p {
+  text-align: center;
+  font-size: 18px;
+  margin: 22px 0 18px;
+  letter-spacing: -0.1px;
+}
+
+.footer-container {
+  background-color: #f2f2f2;
+  height: 343px;
+  letter-spacing: -0.01px;
+  padding: 0 22px;
+  color: #666;
+}
+
+.footer-nav {
+  padding-top: 20px;
+}
+
+.col-2 {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+}
+
+.col-2 ul {
+  list-style-type: none;
+  text-decoration: none;
+  text-align: left;
+  line-height: 19.9px;
+}
+
+.col-2 li:first-child {
+  letter-spacing: -0.01px;
+  color: black;
+  /* padding-top: 20px; */
+}
+
+.col-2 ul:not(:first-child) {
+  padding-top: 20px;
+}
+
+.col-2 a:link,
+.col-2 a:visited,
+.legal-links a:link,
+.legal-links a:visited,
+.locale a:link,
+.locale a:visited {
+  list-style-type: none;
+  text-decoration: none;
+  color: #666;
+}
+
+.col-2 a:hover,
+.col-2 a:active,
+.legal-links a:hover,
+.legal-links a:active,
+.locale a:hover,
+.locale a:active {
+  text-decoration: underline;
+  color: black;
+}
+
+.footer-help {
+  position: relative;
+}
+
+.footer-help p {
+  border-bottom: 1px solid #e3e3e3;
+  margin-bottom: 6px;
+  padding-bottom: 5px;
+}
+
+.legal,
+.legal-links,
+.locale {
+  display: inline-block;
+  float: left;
+  /* justify-items: flex-end; */
+}
+
+.locale {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+}
+
+#locale-flag {
+  display: inline-block;
+  height: 16px;
+  width: 21px;
+  background: url(./source_code/images/usa.png) 3px 0 no-repeat;
+  background-size: 16px 16px;
+  margin-top: 1px;
+  padding-right: 1px;
 }
