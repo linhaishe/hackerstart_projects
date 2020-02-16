@@ -162,6 +162,13 @@ a:active {
   color: #666;
 }
 
+.footer-nav,
+.footer-help {
+  max-width: 1024px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
 .footer-nav {
   padding-top: 20px;
 }
@@ -215,17 +222,29 @@ a:active {
 }
 
 .footer-help p {
+  color: #bebebe;
   border-bottom: 1px solid #e3e3e3;
   margin-bottom: 6px;
   padding-bottom: 5px;
 }
 
+.legal {
+  color: #bebebe;
+  margin-right: 20px;
+}
+
 .legal,
 .legal-links,
 .locale {
-  display: inline-block;
+  /* display: inline-block; */
   float: left;
   /* justify-items: flex-end; */
+}
+
+.legal-links a:not(:last-child) {
+  border-right: 1px solid #666;
+  margin-right: 15px;
+  padding-right: 15px;
 }
 
 .locale {
