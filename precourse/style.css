@@ -81,22 +81,48 @@ nav li:not(:last-child) {
   display: flex;
 } */
 
-#hero-right-contain {
+/* #hero-right-contain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 440px;
   margin-left: 20px;
-}
+} */
 
 /* h2 {
   font-size: 39.5px;
   font-weight: 300;
 } */
 
-#top-header ul {
+#product-name {
+  background: url(./source_code/images/iphone_6s_large.png) no-repeat;
+  background-size: 330px 61px;
+  width: 330px;
+  height: 61px;
+  margin: 0 auto 13px;
+}
+
+#product-text {
+  text-align: center;
+  font-size: 39.5px;
+  line-height: 1.1;
+  font-weight: 300;
+  letter-spacing: -1px;
+  margin-bottom: 27.5px;
+}
+
+#product-links {
+  font-size: 25px;
+  font-weight: 25px;
+  text-align: center;
+}
+
+#hero-right-contain ul {
   list-style-type: none;
   text-align: center;
 }
 
-#top-header li {
+#hero-right-contain li {
   display: inline-block;
 }
 
@@ -160,6 +186,8 @@ a:active {
   letter-spacing: -0.01px;
   padding: 0 22px;
   color: #666;
+  font-size: 11.94px;
+  line-height: 1.6667;
 }
 
 .footer-nav,
@@ -189,6 +217,7 @@ a:active {
 .col-2 li:first-child {
   letter-spacing: -0.01px;
   color: black;
+  font-weight: 600;
   /* padding-top: 20px; */
 }
 
