@@ -3729,7 +3729,7 @@ CSS 在主页列表和体验列表之间共享。
 
 你可以在下面查看完整的源代码。
 
-```
+```html
 <!doctype html>
 <html lang="en">
   <head>
@@ -4213,6 +4213,10 @@ CSS 在主页列表和体验列表之间共享。
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 </html>
+
+```
+
+```css
 /* ----------- Container ----------- */
 @media (min-width: 1200px) {
   .container-fluid {
@@ -4485,10 +4489,6 @@ CSS 在主页列表和体验列表之间共享。
   transform: rotate(90deg);
 }
 ```
-
-# 相关笔记
-
-
 
 
 
