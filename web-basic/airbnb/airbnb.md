@@ -3552,7 +3552,7 @@ CSS 在主页列表和体验列表之间共享。
 
 站点链接和页脚栏都包含在容器中。所以我们应该从通常的`container-fluid`设置开始。
 
-```
+```html
 <footer class="container-fluid">
   <!-- Footer -->
   <div class="row pt-5 d-none d-md-flex footerNav">
@@ -3624,13 +3624,13 @@ CSS 在主页列表和体验列表之间共享。
 
 站点链接由包含四个列元素的行元素组成，每列占用宽度的四分之一，所以我们选择`col-3` 。由于网站链接行消失在`md` 以下，因此将`d-none d-md-flex`添加到`row`元素。
 
-这次我们使用无序列表作为网站链接。你可以将`list-unstyled` 添加到`` 元素中，以摆脱默认的Bootstrap列表样式。
+这次我们使用无序列表作为网站链接。你可以将`list-unstyled` 添加到`` 元素<mark>中</mark>，以摆脱默认的Bootstrap列表样式。
 
 对于“ New”徽章，我们使用的是Bootstrap的徽章类，你可以在https://getbootstrap.net/docs/components/badge/查看文档，这是一个非常便利的Bootstrap组件。
 
 社交媒体图标来自FontAwesome，它们提供了很多品牌图标。
 
-站点链接和页脚栏之间的`` 也需要`d-none d-md-block`，这样它会随着缩小屏幕而消失。
+站点链接和页脚栏之间的`` 也需要`d-none d-md-block`，这样<mark>它会随着缩小</mark>屏幕而消失。
 
 页脚栏也使用行和列，但是使用flex属性对齐。这是一个很好的场景，我们将使用`col-auto` 用于仅占用其内容宽度的列。
 
@@ -3644,7 +3644,7 @@ CSS 在主页列表和体验列表之间共享。
 
 首先，字体大小。
 
-```
+```css
 /* ----------- Footer ----------- */
 
 .footerNav h5, .footerNav a {
@@ -3669,7 +3669,7 @@ CSS 在主页列表和体验列表之间共享。
 
 要旋转尖括号，我们将使用CSS转换。请注意，我们将`d-inline-block` 类添加到尖括号中，因为变换不适用于嵌入式元素。
 
-```
+```css
 .footerBar .select .angle {
   transform: rotate(90deg);
 }
