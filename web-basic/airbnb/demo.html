@@ -22,48 +22,66 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button
-        class="navbar-toggler"
-        type="button"
+    <nav class="navbar navbar-expand-xl py-0">
+      <!-- nav for xl screens -->
+
+      <div class="d-none d-xl-flex" id="xlNavbar">
+        <a class="navbar-brand" href="#">Airbnb</a>
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="#">Become a host</a>
+          <a class="nav-item nav-link" href="#">Earn credit</a>
+          <a class="nav-item nav-link" href="#">Help</a>
+          <a class="nav-item nav-link" href="#">Sign up</a>
+          <a class="nav-item nav-link" href="#">Log in</a>
+        </div>
+      </div>
+
+      <!-- button and collapsed menu -->
+
+      <!-- a标签代替按钮功能展现导航 href与导航id相对应 -->
+      <a
+        class="navbar-toggler navbar-brand"
+        role="button"
         data-toggle="collapse"
-        data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
+        href="#navbarMenu"
+        >Airbnb</a
       >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ">
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <hr />
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Invite friends</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Refer hosts</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Airbnb for work</a>
+          </li>
+          <hr />
+          <li class="nav-item ">
             <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
+              >Host a home<br /><small
+                >Earn up to <b>$12,319 HKD a month</b></small
+              ></a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Host an experience</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="#">Sign up</a>
           </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdownMenuLink"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dropdown link
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Log in</a>
+          </li>
+          <hr />
+          <li class="nav-item">
+            <a class="nav-link" href="#">Help</a>
           </li>
         </ul>
       </div>
