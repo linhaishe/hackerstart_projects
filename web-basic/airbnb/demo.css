@@ -1,0 +1,71 @@
+@media (min-width: 1200px) {
+  #navbarMenu {
+    display: none !important;
+  }
+}
+
+#xlNavbar .navbar-brand,
+#navbarMenuToggler,
+#xlNavbar .nav-link {
+  line-height: 80px;
+}
+
+#xlNavbar .nav-link {
+  font-size: 14px;
+}
+
+#navbarMenuToggler,
+#navbarMenu .nav-link {
+  color: #333;
+}
+
+#navbarMenu .nav-link {
+  padding: 12px 0;
+  font-weight: 300;
+}
+
+#hero {
+  background-image: url(./images/bgim2.jpg);
+  background-size: cover;
+  background-position: center bottom;
+}
+
+#hero h2 {
+  padding-top: 168px;
+}
+
+#navbarMenu {
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 88px;
+}
+
+#navbarMenuToggler {
+  color: rgb(255, 90, 95);
+  transition: color 0.25s;
+  z-index: 1;
+}
+
+#navbarMenuToggler.collapsed {
+  color: #fff;
+}
+
+.container-fluid,
+.container {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+#searchForm .form-control {
+  font-size: 15px;
+  font-weight: 300;
+  border-radius: 0;
+}
+
+#searchForm .btn-danger {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background: #ff5a5f;
+  border-color: #ff5a5f;
+}

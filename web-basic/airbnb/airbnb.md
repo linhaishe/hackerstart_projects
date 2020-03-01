@@ -409,7 +409,7 @@ toggler link 元素需要两个属性才能起到交互作用。它们是`data-t
 
 我们将从标题和背景开始，在大屏幕和下面。
 
-```
+```html
 <div id="hero">
   <div class="container-fluid">
     <h2>Book unique homes and experiences.</h2>
@@ -423,7 +423,7 @@ toggler link 元素需要两个属性才能起到交互作用。它们是`data-t
 
 将已调整大小的图像放在 images 文件夹中。现在我们可以将它设置为#hero 元素的背景。
 
-```
+```css
 #hero {
   background-image: url(./images/luca-bravo-unsplash.jpg);
   background-size: cover;
@@ -435,7 +435,7 @@ toggler link 元素需要两个属性才能起到交互作用。它们是`data-t
 
 ![hero-background](https://tva1.sinaimg.cn/large/006y8mN6ly1g79bsqeuxtj30rr05njt0.jpg)在实际站点上，背景图片看上去比这个高很多，且标题应为白色。让我们为标题添加自定义顶部内边距，以使更高。
 
-```
+```css
 #hero h2 {
   padding-top: 168px;
 }
@@ -443,7 +443,7 @@ toggler link 元素需要两个属性才能起到交互作用。它们是`data-t
 
 对于底部内边距和白色，我们可以使用 Bootstrap 类。
 
-```
+```html
 <h2 class="pb-3 pb-sm-4 text-white">Book unique homes and experiences.</h2>
 ```
 
@@ -457,15 +457,15 @@ toggler link 元素需要两个属性才能起到交互作用。它们是`data-t
 
 我们可以在导航栏上使用 Bootstrap 类`position-absolute` 。它是 Bootstrap 公共样式定位类之一。 https://getbootstrap.net/docs/utilities/position/.
 
-```
+```html
 <nav class="navbar navbar-expand-xl py-0 position-absolute"></nav>
 ```
 
-设置 `position-absolute` 后，导航栏的宽度将缩小到其内容大小。我们需要将宽度设置为 100%值，以便占用``元素的整个宽度。我们可以使用 Bootstrap 的`w-100`类。有关宽度和高度公共样式类的选择，请参阅https://getbootstrap.net/docs/utilities/sizing/。
+设置 `position-absolute` 后，导航栏的宽度将缩小到其内容大小。我们需要将宽度设置为 100%值，<mark>以便占用``元素的整个宽度。我们可以使用 Bootstrap 的`w-100`类。有关</mark>宽度和高度公共样式类的选择，请参阅https://getbootstrap.net/docs/utilities/sizing/。
 
 由于导航栏现在与主角背景重叠，站点链接看不清楚，让导航栏文字变白。此外，为了使折叠菜单可读，我们必须给它一个白色背景。将以下类添加到特定元素。
 
-```
+```html
 <!-- add text-white to the anchor links -->
 
 <div class="d-none d-xl-flex flex-grow-1" id="xlNavbar">
@@ -508,13 +508,16 @@ toggler link 元素需要两个属性才能起到交互作用。它们是`data-t
 
 navbarMenu 扩展后位于导航栏之下。但在原始网站中，白色背景覆盖整个导航栏，左侧和右侧没有间隙。
 
-这意味着我们需要重新定位 navbarMenu，类似于我们对`` 元素所做的操作。首先我们将`position-absolute` 类添加到 navbarMenu，然后我们添加一些位置属性。
+<mark>这意味着我们</mark>需要重新定位 navbarMenu，类似于我们对`` 元素所做的操作。首先我们将position-absolute类添加到 navbarMenu，然后我们添加一些位置属性。
 
-```
+```html
 <div
   class="collapse navbar-collapse px-2 pb-4 font-weight-light bg-white position-absolute"
   id="navbarMenu"
 ></div>
+```
+
+```css
 #navbarMenu {
   top: 0;
   left: 0;
@@ -525,7 +528,7 @@ navbarMenu 扩展后位于导航栏之下。但在原始网站中，白色背景
 
 刷新并单击 toggler，菜单将显示并覆盖 toggler。左右的 paddings 现在也关闭了。我们先修复 paddings，将`px-2` 更改为`px-4` 。
 
-```
+```html
 <div
   class="collapse navbar-collapse px-4 pb-4 font-weight-light bg-white position-absolute"
   id="navbarMenu"
@@ -542,13 +545,13 @@ navbarMenu 扩展后位于导航栏之下。但在原始网站中，白色背景
 
 首先，删除`navbar-toggler` 上的`text-white` 类，并添加类`position-relative` 和`collapsed` 。请记住，`z-index` 的运用是需要条件的，与其相关的属性就是 position 属性。当设置`position:static`或者没有设置 position 属性的时候，改变 z-index 不会产生任何效果。。
 
-```
+```html
 <a class="navbar-toggler navbar-brand py-0 pr-0 pl-2 border-0 position-relative collapsed" role="button" data-toggle="collapse" href="#navbarMenu" id="navbarMenuToggler">Airbnb</a>
 ```
 
 然后我们将添加 CSS 来更改 z-index 和颜色。虽然我们在这里，让我们为颜色添加一个短暂的过渡，使它看起来更好。
 
-```
+```css
 #navbarMenuToggler {
   color: rgb(255, 90, 95);
   transition: color 0.25s;
@@ -568,7 +571,7 @@ navbarMenu 扩展后位于导航栏之下。但在原始网站中，白色背景
 
 如果仔细查看原始网站，Airbnb 在容器上的左右内边距为 24px 。但是 Bootstrap 的默认容器内边距为 15px 。我们可以通过在 CSS 文件中设置自定义内边距值来更改此设置。
 
-```
+```css
 .container-fluid,
 .container {
   padding-left: 24px;
@@ -590,7 +593,7 @@ Bootstrap 有一个非常不错的表单系统，https://getbootstrap.net/docs/c
 
 我们将`form-control-lg` 添加到每个输入元素，以略微增加其大小。
 
-```
+```html
 <div id="searchForm">
   <div class="container-fluid">
     <form class="py-4">
@@ -656,7 +659,7 @@ Bootstrap 有一个非常不错的表单系统，https://getbootstrap.net/docs/c
 
 我们对 input 元素的字体样式中添加一些 CSS，使其看起来更像原始字体。我们还需要删除默认的边框半径。
 
-```
+```css
 #searchForm .form-control {
   font-size: 15px;
   font-weight: 300;
@@ -670,7 +673,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 同时，将`border-left-0` 添加到第二个日期 input 元素以删除其左边框。
 
-```
+```html
 <div class="row no-gutters">
   <div class="form-group col-6">
     <label for="checkin"
@@ -699,7 +702,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 此外，按钮的垂直内边距应略大，颜色应为较浅的红色。
 
-```
+```css
 #searchForm .btn-danger {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -728,7 +731,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 在 hero 元素的`xl`断点处将高度增加到`100vh` 。并给它一个最小的高度，这样即使屏幕高度很短，背景也会比表格高
 
-```
+```css
 @media (min-width: 1200px) {
   #hero {
     height: 100vh;
@@ -739,7 +742,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 隐藏`xl`断点上的标题元素。
 
-```
+```css
 <h2 class="mb-0 pb-3 pb-sm-4 text-white d-xl-none">
   Book unique homes and experiences.
 </h2>
@@ -747,7 +750,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 将 searchForm 的位置设置为 absolute，并将其定位在导航栏下方并留出一定的空隙，确保其宽度设置为 100%。
 
-```
+```css
 @media (min-width: 1200px) {
   #searchForm {
     position: absolute;
@@ -759,7 +762,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 将标题元素添加到表单中，仅显示在 xl 上。
 
-```
+```css
 <form class="py-4">
   <h2 class="d-none d-xl-block">Book unique homes and experiences.</h2>
 </form>
@@ -767,7 +770,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 给 searchForm 中的 container-fluid 元素一个`xl` 断点的最大宽度值。
 
-```
+```css
 @media (min-width: 1200px) {
   #searchForm .container-fluid {
     max-width: 1080px;
@@ -777,7 +780,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 给表单更大的内边距、白色背景、圆角、最大宽度和一些框阴影。
 
-```
+```css
 <form class="py-4 rounded bg-white"></form>
 @media (min-width: 1200px) {
   #searchForm form {
@@ -812,7 +815,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 我们将首先处理网站链接。如果你深入挖掘原始站点上的站点链接，你将看到它分为两层。每个链接周围都有一个`button`元素，左右两边有`8px` 内边距。然后有一个包含文本的`div`元素，它还有一个`8px`的水平内边距。底部边框仅应用于`div`元素。我们将复制这种结构。
 
-```
+```html
 <div class="d-none d-xl-flex flex-grow-1" id="xlNavbar">
   <a class="navbar-brand py-0 pr-0 pl-2 text-white" href="#">Airbnb</a>
   <div class="navbar-nav ml-auto">
@@ -833,6 +836,10 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
     >
   </div>
 </div>
+
+```
+
+```css
 @media (min-width: 1200px) {
   #xlNavbar .nav-link div:hover {
     border-bottom: 2px solid #fff;
@@ -846,7 +853,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 链接应相对于 hero 元素定位。
 
-```
+```html
 <div id="hero" class="position-relative">
   <div class="container-fluid">
     <h2 class="mb-0 pb-3 pb-sm-4 text-white d-xl-none">
@@ -871,7 +878,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 我们需要在导航栏中添加一个正`z-index` 值，以便它显示在 hero 元素的上方。将一个**id** 添加到``元素并给它一个`z-index: 1`; 。
 
-```
+```html
 <nav
   class="navbar navbar-expand-xl py-0 position-absolute w-100"
   id="navbar"
@@ -887,7 +894,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 很棒，第 2 部分已经完成。你可以在下面看到完整的源代码。或者访问 [HTML CSS: AirBnb Clone Part 2](https://codepen.io/HackerStart/pen/MWgZRpg) 在线查看。
 
-```
+```css
 <!DOCTYPE html>
 <html lang="en">
   <head>
