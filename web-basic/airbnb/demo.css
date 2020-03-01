@@ -81,41 +81,86 @@
     height: 100vh;
     min-height: 650px;
   }
-}
 
-@media (min-width: 1200px) {
   #searchForm {
     position: absolute;
     top: 120px;
     width: 100%;
   }
-}
 
-@media (min-width: 1200px) {
-  #searchForm .container-fluid {
+  /* #searchForm .container-fluid {
+    max-width: 1080px;
+  } */
+
+  .container-fluid {
     max-width: 1080px;
   }
-}
 
-@media (min-width: 1200px) {
   #searchForm form {
     padding: 32px;
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
     max-width: 441px;
   }
-}
 
-@media (min-width: 1200px) {
   #xlNavbar .nav-link:hover {
     border-bottom: 2px solid #fff;
   }
-}
 
-#message {
-  bottom: 0;
-  right: 0;
+  #message {
+    bottom: 0;
+    right: 0;
+  }
 }
 
 /* #navbar {
   z-index: 3;
 } */
+
+@media (max-width: 767px) {
+  .headings h4 {
+    font-size: 18px;
+  }
+  .headings p {
+    font-size: 13px;
+  }
+}
+
+.scrollableRow {
+  overflow-x: scroll;
+}
+
+.scrollableRow {
+  overflow-x: scroll;
+  margin-left: 24px;
+  margin-right: 24px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.scrollableRow > [class*="col-"] {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.review .description {
+  line-height: 18px;
+  max-height: 60px;
+  overflow: hidden;
+  /* using line clamp */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipses;
+}
+
+.review .user i {
+  font-size: 48px;
+}
+
+.review .user .name b {
+  font-weight: 500;
+}
+
+.review .user .location {
+  line-height: 18px;
+}

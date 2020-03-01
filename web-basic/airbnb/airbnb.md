@@ -1227,7 +1227,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 我们将首先处理比较简单的部分，让我们创建一个新的`container-fluid` div 来包含这部分。然后为第一部分添加另一个 div。添加标题和副标题。
 
-```
+```html
 <div class="container-fluid">
   <!-- First Section -->
   <div class="headings">
@@ -1248,7 +1248,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 还记得我们之前在`xl` 断点上为`container-fluid` 类设置了最大宽度值吗？它仅为`#searchForm` 元素设置。现在，我们需要为所有`container-fluid` 设置此项。因此，删除先前 searchForm 的 CSS 规则，然后将其规则添加到所有容器中
 
-```
+```css
 /* ----------- Container ----------- */
 @media (min-width: 1200px) {
   .container-fluid {
@@ -1275,18 +1275,18 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 }
 ```
 
-在第一部分`` 元素中添加一些顶部内边距，也增加`` 元素的底部外边距。
+在第一部分`` 元素中添加一些顶部内边距，也增加`` 元素<mark>的底部</mark>外边距。
 
-```
+```html
 <!-- First Section -->
 <div class="pt-3 pt-lg-4 pt-xl-5 headings">
   <h4 class="mb-3">What guests are saying about homes in United States</h4>
 </div>
 ```
 
-查看断点`md` 的布局。请注意，副标题的前半部分消失了。我们可以通过将该部分封装在`` 元素中并将其隐藏以实现较小的断点来实现。
+查看断点`md` 的布局。请注意，副标题的前半部分消失了。我们可以通过将该部分封装在`` 元<mark>素中并</mark>将其隐藏以实现较小的断点来实现。
 
-```
+```html
 <p>
   &#11088;
   <span class="d-none d-md-inline">United States homes were rated </span
@@ -1296,7 +1296,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 最后，对于断点`md`及以下，标题和副标题的字体大小显着减小。我们将添加一些带有媒体查询的 CSS 来实现这一目标。
 
-```
+```css
 /* ----------- Content ----------- */
 
 @media (max-width: 767px) {
@@ -1317,7 +1317,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 - `md` 处，每个项目占用半个行。
 - `xl`处，每个项目占据行的三分之一。
 
-```
+```html
 <div class="row pt-2 scrollableRow">
   <div class="col-12 col-md-6 col-xl-4">
     <div class="review">
@@ -1419,9 +1419,9 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 </div>
 ```
 
-我们用了名为[FontAwesome](https://fontawesome.com/)的图标资源，将其添加到`` 元素中 Bootstrap 链接的后面。
+我们用了名为[FontAwesome](https://fontawesome.com/)的图标资源，将其添加到`` 元素<mark>中 Bootstrap</mark>链接的后面。
 
-```
+```html
 <!-- Fontawesome -->
 <script
   src="https://kit.fontawesome.com/96ba351cc0.js"
@@ -1435,7 +1435,7 @@ FontAwesome 是一个图标库，提供了不错的免费图标。在https://fon
 
 ![img](https://tva1.sinaimg.cn/large/0082zybpgy1gbo3rs3uurj30zg0qqagw.jpg)
 
-```
+```html
 <!-- using the star icon -->
 <i class="fas fa-star"></i>
 ```
@@ -1457,13 +1457,13 @@ FontAwesome 是一个图标库，提供了不错的免费图标。在https://fon
 
 这种效果实际上很容易做到。我们只需要向`scrollableRow` 类添加一个 CSS 属性，并将`flex-nowrap` 添加到`row` 元素中。
 
-```
+```html
 <div class="row flex-nowrap pt-2 scrollableRow"></div>
 ```
 
 `flex-nowrap` 在`row`元素上设置`flex-wrap: nowrap;` 。这意味着不适合一行的 flex 项目不会被推送到新行。相反，它们将向右延伸。
 
-```
+```css
 .scrollableRow {
   overflow-x: scroll;
 }
@@ -1488,13 +1488,13 @@ FontAwesome 是一个图标库，提供了不错的免费图标。在https://fon
 
 首先，我们使用`row`元素上的`no-gutters` 类删除所有默认的网格间距设置。
 
-```
+```html
 <div class="row flex-nowrap pt-2 scrollableRow no-gutters"></div>
 ```
 
 然后，我们将一些自定义内边距和外边距值添加到`scrollableRow` 和列。
 
-```
+```css
 .scrollableRow {
   overflow-x: scroll;
   margin-left: -24px;
@@ -1519,9 +1519,12 @@ W3C 仍在决定如何解决此问题，你可以在 https://github.com/w3c/cssw
 
 可以采取一些措施来改善这一状况。通过在最后一个项目后面的断点`lg` 及以下添加恰好距离的内边距元素。
 
-```
+```css
 <!-- Filler -->
 <div class="d-xl-none filler"></div>
+```
+
+```css
 .scrollableRow .filler {
   min-width: 18px;
 }
@@ -1535,7 +1538,7 @@ W3C 仍在决定如何解决此问题，你可以在 https://github.com/w3c/cssw
 
 为了控制每条线的高度，我们将使用`line-height` 。基于此，我们可以将段落元素的`max-height` 值设置为稍大于`line-height` 值的三倍。
 
-```
+```css
 .review .description {
   line-height: 18px;
   max-height: 60px;
@@ -1545,10 +1548,10 @@ W3C 仍在决定如何解决此问题，你可以在 https://github.com/w3c/cssw
 
 执行此操作的更高级的方法是在句子的末尾添加省略号“ ...”，这是使用一种称为`line-clamp`的方法。
 
-```
+```css
 .review .description {
   line-height: 18px;
-  max-height: 60px;
+  max-height: 60px;c
   overflow: hidden;
   /* using line clamp */
   display: -webkit-box;
@@ -1568,7 +1571,7 @@ W3C 仍在决定如何解决此问题，你可以在 https://github.com/w3c/cssw
 
 我们只需要一点点修饰就可以让物品看起来很棒。首先，让我们将星形图标设置为浅灰色。
 
-```
+```css
 <div class="rating mb-2 text-black-50">
   <i class="fas fa-star"></i>
   <i class="fas fa-star"></i>
@@ -1580,13 +1583,13 @@ W3C 仍在决定如何解决此问题，你可以在 https://github.com/w3c/cssw
 
 接下来，在描述中添加一点右边内边距，使其不会填充项目的整个宽度。
 
-```
+```html
 <p class="description pr-4"></p>
 ```
 
 将用户图标的字体大小增加到`48px` 。
 
-```
+```css
 .review .user i {
   font-size: 48px;
 }
@@ -1594,7 +1597,7 @@ W3C 仍在决定如何解决此问题，你可以在 https://github.com/w3c/cssw
 
 最后，减少`font-weight`的`name`到`500` ，和减少`location`的`line-height`的值为 18 像素。
 
-```
+```css
 .review .user .name b {
   font-weight: 500;
 }
@@ -1616,7 +1619,7 @@ W3C 仍在决定如何解决此问题，你可以在 https://github.com/w3c/cssw
 
 之后，将所有调整大小后的图像放入项目的“ images”文件夹中。然后，你可以更改每个图像元素的 src 链接。
 
-```
+```html
 <img class="img-fluid w-100 rounded" src="./images/blake-wisz-unsplash.jpg" />
 
 <img
@@ -1645,7 +1648,7 @@ W3C 仍在决定如何解决此问题，你可以在 https://github.com/w3c/cssw
 
 从项目中删除所有图像元素，并将 url 作为内联 CSS `background-image` 属性添加到`` 元素。
 
-```
+```html
 <div
   class="aspectRatioBox mb-3 rounded"
   style="background-image: url('./images/blake-wisz-unsplash.jpg')"
@@ -1664,7 +1667,7 @@ W3C 仍在决定如何解决此问题，你可以在 https://github.com/w3c/cssw
 
 CSS 提供了`calc()`函数，该函数可用于计算数学公式的值。我们可以使用它来准确定义正确的高宽比，而不用输入接近的估计值。有关`calc()`的更多信息，请查看此 MDN 文档https://developer.mozilla.org/en-US/docs/Web/CSS/calc。
 
-```
+```css
 .aspectRatioBox {
   padding-top: calc(2 / 3 * 100%); /* aspect ratio 3:2 */
   background-size: cover;
@@ -1680,9 +1683,7 @@ CSS 提供了`calc()`函数，该函数可用于计算数学公式的值。我�
 
 元素，我们差不多就完成了第 3 部分。
 
-
-
-```
+```html
 <hr class="mt-4 mt-xl-5" />
 ```
 
@@ -1690,7 +1691,7 @@ CSS 提供了`calc()`函数，该函数可用于计算数学公式的值。我�
 
 你可以在下面看到完整的源代码。访问[HTML CSS: AirBnb Clone Part 3](https://codepen.io/HackerStart/pen/NWKeZJz)查看线上演示。
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -1995,6 +1996,10 @@ CSS 提供了`calc()`函数，该函数可用于计算数学公式的值。我�
     ></script>
   </body>
 </html>
+
+```
+
+```css
 /* ----------- Container ----------- */
 @media (min-width: 1200px) {
   .container-fluid {
@@ -2168,6 +2173,8 @@ CSS 提供了`calc()`函数，该函数可用于计算数学公式的值。我�
   line-height: 18px;
 }
 ```
+
+
 
 # Airbnb 克隆第 4 部分
 
