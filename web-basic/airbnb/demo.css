@@ -106,7 +106,16 @@
 }
 
 @media (min-width: 1200px) {
-  #xlNavbar .nav-link div:hover {
+  #xlNavbar .nav-link:hover {
     border-bottom: 2px solid #fff;
   }
 }
+
+#message {
+  bottom: 0;
+  right: 0;
+}
+
+/* #navbar {
+  z-index: 3;
+} */

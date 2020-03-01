@@ -871,6 +871,9 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
     >
   </div>
 </div>
+```
+
+```css
 #message {
   bottom: 0;
   right: 0;
@@ -879,17 +882,22 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 保存并刷新。右下角的消息链接看起来还不错，但导航栏消失了。由于我们将 hero 元素的位置值设置为`relative` ，因此在层叠顺序中它现在在导航栏的上方。
 
-我们需要在导航栏中添加一个正`z-index` 值，以便它显示在 hero 元素的上方。将一个**id** 添加到``元素并给它一个`z-index: 1`; 。
+我们需要在导航栏中添加一个正`z-index` 值，以便它显示在 hero 元素的上方。<mark>将一个</mark>**id** 添加到``元素并给它一个`z-index: 1`; 。
 
 ```html
 <nav
   class="navbar navbar-expand-xl py-0 position-absolute w-100"
   id="navbar"
 ></nav>
+```
+
+```css
 #navbar {
   z-index: 1;
 }
 ```
+
+
 
 ![img](https://tva1.sinaimg.cn/large/0082zybpgy1gbo2trmq3jj30zi0k2dzw.jpg)
 
@@ -897,7 +905,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 很棒，第 2 部分已经完成。你可以在下面看到完整的源代码。或者访问 [HTML CSS: AirBnb Clone Part 2](https://codepen.io/HackerStart/pen/MWgZRpg) 在线查看。
 
-```css
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -1078,6 +1086,10 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
     ></script>
   </body>
 </html>
+
+```
+
+```css
 /* ----------- Container ----------- */
 
 .container-fluid,
@@ -1192,6 +1204,8 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
   }
 }
 ```
+
+
 
 # Airbnb 克隆第 3 部分
 
