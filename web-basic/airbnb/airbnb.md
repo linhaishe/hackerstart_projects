@@ -2483,8 +2483,6 @@ CSS 提供了`calc()`函数，该函数可用于计算数学公式的值。我�
 .listingsLink { color: #008489; font-size: 17px; }
 ```
 
-
-
 ![img](https://tva1.sinaimg.cn/large/0082zybpgy1gbo2z2y6gij30zh0bq137.jpg)
 
 ### 最高评分体验

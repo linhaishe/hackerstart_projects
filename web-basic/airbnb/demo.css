@@ -242,3 +242,11 @@
   padding-top: 12px;
   padding-bottom: 12px;
 }
+
+#piccc {
+  background-image: url("./images/outdoor2-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 295px;
+}
