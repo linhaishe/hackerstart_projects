@@ -2190,9 +2190,9 @@ CSS 提供了`calc()`函数，该函数可用于计算数学公式的值。我�
 
 这与上部分的结构几乎相同，我们可以把结构复制过来 。
 
-在`` 元素后添加以下内容。
+在`` 元<mark>素后添</mark>加以下内容。
 
-```
+```html
 <!-- Value Props -->
 
 <div class="row flex-nowrap pt-2 pt-md-3 scrollableRow no-gutters">
@@ -2254,7 +2254,7 @@ CSS 提供了`calc()`函数，该函数可用于计算数学公式的值。我�
 
 只需要一点自定义 CSS。
 
-```
+```css
 /* ------------ Value Props ------------ */
 
 .valueProp .icon {
@@ -2301,9 +2301,9 @@ CSS 提供了`calc()`函数，该函数可用于计算数学公式的值。我�
 - https://unsplash.com/photos/ojEK3p9cDg4
 - https://unsplash.com/photos/K1iqi58F4Qw
 
-这是代码，在`` 元素后添加以下内容。
+这是代码，在`` 元<mark>素</mark>后添加以下内容。
 
-```
+```html
 <!-- Home Listings -->
 <div class="pt-4 pt-lg-5 headings">
   <h4 class="mb-3">Homes in United States</h4>
@@ -2426,6 +2426,10 @@ CSS 提供了`calc()`函数，该函数可用于计算数学公式的值。我�
   <!-- Filler -->
   <div class="d-xl-none filler"></div>
 </div>
+
+```
+
+```css
 /* ------------ Listings ------------ */
 
 .listing .location {
@@ -2469,13 +2473,17 @@ CSS 提供了`calc()`函数，该函数可用于计算数学公式的值。我�
 
 在列表的底部，有一个指向列表页面的链接。它只在`md` 及以上显示。
 
-```
+```html
 <div class="mt-3 d-none d-md-block">
   <a href="#" class="listingsLink">Show all (22,000+) &gt;</a>
 </div>
+```
 
+```css
 .listingsLink { color: #008489; font-size: 17px; }
 ```
+
+
 
 ![img](https://tva1.sinaimg.cn/large/0082zybpgy1gbo2z2y6gij30zh0bq137.jpg)
 
@@ -2504,7 +2512,7 @@ CSS 提供了`calc()`函数，该函数可用于计算数学公式的值。我�
 
 请记住在使用之前减小图像的大小，可以使用https://www.reduceimages.com/或在你的计算机上使用本地工具。
 
-```
+```html
 <div class="pt-4 pt-lg-5 headings">
   <h4 class="mb-3">Top-rated experiences</h4>
 </div>
@@ -2607,7 +2615,7 @@ CSS 在主页列表和体验列表之间共享。
 
 要在中心对齐文本，我们可以使用 flex 属性。
 
-```
+```html
 <div
   class="aspectRatioBox mb-2 rounded position-relative"
   style="background-image: url('./images/matt-zhou-unsplash.jpg')"
@@ -2622,7 +2630,7 @@ CSS 在主页列表和体验列表之间共享。
 
 你需要将叠加层的顶部位置设置为`0` ，使其位于父元素的正上方，也就是高宽比盒子的上方。
 
-```
+```css
 .overlay {
   top: 0;
 }
@@ -2630,7 +2638,7 @@ CSS 在主页列表和体验列表之间共享。
 
 剩下要做的唯一事情是添加一些透明度的绿色蓝色背景。
 
-```
+```css
 .overlay {
   top: 0;
   background-color: rgba(0, 255, 255, 0.3);
@@ -2647,7 +2655,7 @@ CSS 在主页列表和体验列表之间共享。
 
 我们可以使用与前面所有部分相同的标题元素。
 
-```
+```html
 <div class="mt-3 py-4 py-lg-5 headings callToAction">
   <h4 class="mb-0 mb-md-1">When are you traveling?</h4>
   <p class="font-weight-light">
@@ -2659,7 +2667,7 @@ CSS 在主页列表和体验列表之间共享。
 
 按钮和副标题的 CSS
 
-```
+```css
 /* ----------- Call to action ----------- */
 
 @media (max-width: 767px) {
@@ -2685,7 +2693,7 @@ CSS 在主页列表和体验列表之间共享。
 
 你可以在下面看到完整的源代码。
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -3273,6 +3281,9 @@ CSS 在主页列表和体验列表之间共享。
     ></script>
   </body>
 </html>
+```
+
+```css
 /* ----------- Container ----------- */
 @media (min-width: 1200px) {
   .container-fluid {
@@ -3325,7 +3336,6 @@ CSS 在主页列表和体验列表之间共享。
 #navbarMenu .nav-link {
   color: #333;
 }
-
 #navbarMenu {
   top: 0;
   left: 0;
@@ -3525,6 +3535,8 @@ CSS 在主页列表和体验列表之间共享。
   padding-bottom: 12px;
 }
 ```
+
+
 
 # Airbnb 克隆第 5 部分
 

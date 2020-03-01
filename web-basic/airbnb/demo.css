@@ -164,3 +164,81 @@
 .review .user .location {
   line-height: 18px;
 }
+
+/* ------------ Value Props ------------ */
+
+.valueProp .icon {
+  font-size: 40px;
+  line-height: 40px;
+  color: rgb(65, 198, 188);
+}
+
+.valueProp .title {
+  font-weight: 500;
+}
+
+/* ------------ Listings ------------ */
+
+.listing .location {
+  line-height: 18px;
+}
+
+.listing .location small {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.listing .title {
+  font-weight: 600;
+  margin-top: 1px;
+  color: #484848;
+}
+
+.listing .pricing {
+  line-height: 18px;
+  margin-top: 2px;
+}
+
+.listing .pricing small {
+  font-weight: 300;
+}
+
+.listing .info {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 3px;
+}
+
+.listing .info .rating {
+  font-size: 8.5px;
+  letter-spacing: -1px;
+  margin-right: 3px;
+}
+
+.listingsLink {
+  color: #008489;
+  font-size: 17px;
+}
+
+.overlay {
+  top: 0;
+}
+
+.overlay {
+  top: 0;
+  background-color: rgba(0, 255, 255, 0.3);
+}
+
+/* ----------- Call to action ----------- */
+
+@media (max-width: 767px) {
+  .callToAction.headings p {
+    font-size: 1rem;
+  }
+}
+
+.callToAction button {
+  background-color: #008489;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
