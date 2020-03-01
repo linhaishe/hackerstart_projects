@@ -742,7 +742,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 隐藏`xl`断点上的标题元素。
 
-```css
+```html
 <h2 class="mb-0 pb-3 pb-sm-4 text-white d-xl-none">
   Book unique homes and experiences.
 </h2>
@@ -762,7 +762,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 将标题元素添加到表单中，仅显示在 xl 上。
 
-```css
+```html
 <form class="py-4">
   <h2 class="d-none d-xl-block">Book unique homes and experiences.</h2>
 </form>
@@ -780,8 +780,11 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 给表单更大的内边距、白色背景、圆角、最大宽度和一些框阴影。
 
-```css
+```html
 <form class="py-4 rounded bg-white"></form>
+```
+
+```css
 @media (min-width: 1200px) {
   #searchForm form {
     padding: 32px;
@@ -793,7 +796,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 将搜索按钮对齐到右侧。
 
-```
+```html
 <div class="d-flex flex-column align-items-xl-end"></div>
 ```
 

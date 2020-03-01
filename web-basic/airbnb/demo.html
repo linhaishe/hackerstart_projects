@@ -27,8 +27,8 @@
       <!-- flex-grow-1 -->
 
       <div class="d-none d-xl-flex flex-grow-1" id="xlNavbar">
-        <a class="navbar-brand" href="#">Airbnb</a>
-        <div class="navbar-nav">
+        <a class="navbar-brand text-white" href="#">Airbnb</a>
+        <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link text-white" href="#">Become a host</a>
           <a class="nav-item nav-link text-white" href="#">Earn credit</a>
           <a class="nav-item nav-link text-white" href="#">Help</a>
@@ -94,7 +94,7 @@
 
     <div id="hero">
       <div class="container-fluid">
-        <h2 class="pb-3 pb-sm-4 text-white">
+        <h2 class="mb-0 pb-3 pb-sm-4 text-white d-xl-none">
           Book unique homes and experiences.
         </h2>
       </div>
@@ -102,7 +102,8 @@
 
     <div id="searchForm">
       <div class="container-fluid">
-        <form>
+        <form class="py-4 rounded bg-white">
+          <h2 class="d-none d-xl-block">Book unique homes and experiences.</h2>
           <div class="form-group">
             <label for="inputAddress">WHERE</label>
             <input
@@ -144,7 +145,9 @@
               <option>3 guest</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-danger w-100">Search</button>
+          <button type="submit" class="btn btn-danger ">
+            Search
+          </button>
         </form>
       </div>
     </div>

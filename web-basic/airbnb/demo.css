@@ -44,11 +44,15 @@
 #navbarMenuToggler {
   color: rgb(255, 90, 95);
   transition: color 0.25s;
-  z-index: 1;
+  z-index: 2;
 }
 
 #navbarMenuToggler.collapsed {
   color: #fff;
+}
+
+#navbarMenu.collapse {
+  z-index: 1;
 }
 
 .container-fluid,
@@ -68,4 +72,41 @@
   padding-bottom: 12px;
   background: #ff5a5f;
   border-color: #ff5a5f;
+}
+
+/* 在 hero 元素的`xl`断点处将高度增加到`100vh` 。并给它一个最小的高度，这样即使屏幕高度很短，背景也会比表格高 */
+
+@media (min-width: 1200px) {
+  #hero {
+    height: 100vh;
+    min-height: 650px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #searchForm {
+    position: absolute;
+    top: 120px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #searchForm .container-fluid {
+    max-width: 1080px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #searchForm form {
+    padding: 32px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    max-width: 441px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #xlNavbar .nav-link div:hover {
+    border-bottom: 2px solid #fff;
+  }
 }
