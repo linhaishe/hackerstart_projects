@@ -1,6 +1,6 @@
 # Airbnb 克隆第 1 部分
 
-> 本练习的目的是展示新框架 Bootstrap 4 的便利性，我们将克隆 Airbnb（https://www.airbnb.com/）的特定版本。
+> 本练习的目的是展示新框架 Bootstrap 4 的便利性，我们将克隆 [Airbnb](https://www.airbnb.com/ )  的特定版本。
 >
 > 请注意，你访问在线的 Airbnb 网站可能与本次浏览中使用的网站不同。
 
@@ -461,7 +461,7 @@ toggler link 元素需要两个属性才能起到交互作用。它们是`data-t
 <nav class="navbar navbar-expand-xl py-0 position-absolute"></nav>
 ```
 
-设置 `position-absolute` 后，导航栏的宽度将缩小到其内容大小。我们需要将宽度设置为 100%值，<mark>以便占用``元素的整个宽度。我们可以使用 Bootstrap 的`w-100`类。有关</mark>宽度和高度公共样式类的选择，请参阅https://getbootstrap.net/docs/utilities/sizing/。
+设置 `position-absolute` 后，导航栏的宽度将缩小到其内容大小。我们需要将宽度设置为 100%值，以便占用`<body>`元素的整个宽度。我们可以使用 Bootstrap 的`w-100`类。有关宽度和高度公共样式类的选择，请参阅https://getbootstrap.net/docs/utilities/sizing/。
 
 由于导航栏现在与主角背景重叠，站点链接看不清楚，让导航栏文字变白。此外，为了使折叠菜单可读，我们必须给它一个白色背景。将以下类添加到特定元素。
 
@@ -508,7 +508,7 @@ toggler link 元素需要两个属性才能起到交互作用。它们是`data-t
 
 navbarMenu 扩展后位于导航栏之下。但在原始网站中，白色背景覆盖整个导航栏，左侧和右侧没有间隙。
 
-<mark>这意味着我们</mark>需要重新定位 navbarMenu，类似于我们对`` 元素所做的操作。首先我们将position-absolute类添加到 navbarMenu，然后我们添加一些位置属性。
+这意味着我们需要重新定位 navbarMenu，类似于我们对`<nav>` 元素所做的操作。首先我们将position-absolute类添加到 navbarMenu，然后我们添加一些位置属性。
 
 ```html
 <div
@@ -882,7 +882,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 
 保存并刷新。右下角的消息链接看起来还不错，但导航栏消失了。由于我们将 hero 元素的位置值设置为`relative` ，因此在层叠顺序中它现在在导航栏的上方。
 
-我们需要在导航栏中添加一个正`z-index` 值，以便它显示在 hero 元素的上方。<mark>将一个</mark>**id** 添加到``元素并给它一个`z-index: 1`; 。
+我们需要在导航栏中添加一个正`z-index` 值，以便它显示在 hero 元素的上方。将一个**id** 添加到`<nav>`元素并给它一个`z-index: 1`; 。
 
 ```html
 <nav
@@ -1275,7 +1275,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 }
 ```
 
-在第一部分`` 元素中添加一些顶部内边距，也增加`` 元素<mark>的底部</mark>外边距。
+在第一部分`<div>` 元素中添加一些顶部内边距，也增加`<h4>` 元素的底部外边距。
 
 ```html
 <!-- First Section -->
@@ -1284,7 +1284,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 </div>
 ```
 
-查看断点`md` 的布局。请注意，副标题的前半部分消失了。我们可以通过将该部分封装在`` 元<mark>素中并</mark>将其隐藏以实现较小的断点来实现。
+查看断点`md` 的布局。请注意，副标题的前半部分消失了。我们可以通过将该部分封装在`<span>` 元素中并将其隐藏以实现较小的断点来实现。
 
 ```html
 <p>
@@ -1419,7 +1419,7 @@ Bootstrap 有一个`no-gutters` 类，可以添加到`row` 元素中以删除列
 </div>
 ```
 
-我们用了名为[FontAwesome](https://fontawesome.com/)的图标资源，将其添加到`` 元素<mark>中 Bootstrap</mark>链接的后面。
+我们用了名为[FontAwesome](https://fontawesome.com/)的图标资源，将其添加到`<head>` 元素中 Bootstrap链接的后面。
 
 ```html
 <!-- Fontawesome -->
@@ -2190,7 +2190,7 @@ CSS 提供了`calc()`函数，该函数可用于计算数学公式的值。我�
 
 这与上部分的结构几乎相同，我们可以把结构复制过来 。
 
-在`` 元<mark>素后添</mark>加以下内容。
+在`<hr>` 元素后添加以下内容。
 
 ```html
 <!-- Value Props -->
@@ -2301,7 +2301,7 @@ CSS 提供了`calc()`函数，该函数可用于计算数学公式的值。我�
 - https://unsplash.com/photos/ojEK3p9cDg4
 - https://unsplash.com/photos/K1iqi58F4Qw
 
-这是代码，在`` 元<mark>素</mark>后添加以下内容。
+这是代码，在`<hr>` 元素后添加以下内容。
 
 ```html
 <!-- Home Listings -->
@@ -3624,13 +3624,13 @@ CSS 在主页列表和体验列表之间共享。
 
 站点链接由包含四个列元素的行元素组成，每列占用宽度的四分之一，所以我们选择`col-3` 。由于网站链接行消失在`md` 以下，因此将`d-none d-md-flex`添加到`row`元素。
 
-这次我们使用无序列表作为网站链接。你可以将`list-unstyled` 添加到`` 元素<mark>中</mark>，以摆脱默认的Bootstrap列表样式。
+这次我们使用无序列表作为网站链接。你可以将`list-unstyled` 添加到`<ul>` 元素中，以摆脱默认的Bootstrap列表样式。
 
 对于“ New”徽章，我们使用的是Bootstrap的徽章类，你可以在https://getbootstrap.net/docs/components/badge/查看文档，这是一个非常便利的Bootstrap组件。
 
 社交媒体图标来自FontAwesome，它们提供了很多品牌图标。
 
-站点链接和页脚栏之间的`` 也需要`d-none d-md-block`，这样<mark>它会随着缩小</mark>屏幕而消失。
+站点链接和页脚栏之间的`<hr>` 也需要`d-none d-md-block`，这样它会随着缩小屏幕而消失。
 
 页脚栏也使用行和列，但是使用flex属性对齐。这是一个很好的场景，我们将使用`col-auto` 用于仅占用其内容宽度的列。
 
